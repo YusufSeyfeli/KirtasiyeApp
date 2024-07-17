@@ -49,7 +49,7 @@ namespace Business.Repositories.SiparisUrunRepository
         [SecuredAspect()]
         [RemoveCacheAspect("ISiparisUrunService.Get")]
 
-        public async Task<IResult> Delete(SiparisUrun siparisUrun)
+        public async Task<IResult> Delete(int siparisUrun)
         {
             await _siparisUrunDal.Delete(siparisUrun);
             return new SuccessResult(SiparisUrunMessages.Deleted);

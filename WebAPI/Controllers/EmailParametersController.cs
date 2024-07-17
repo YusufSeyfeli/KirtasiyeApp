@@ -38,7 +38,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> Delete(EmailParameter emailParameter)
+        public async Task<IActionResult> Delete(int emailParameter)
         {
             var result = await _emailParameterService.Delete(emailParameter);
             if (result.Success)

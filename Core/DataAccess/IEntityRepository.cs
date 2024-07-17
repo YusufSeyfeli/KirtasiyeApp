@@ -6,7 +6,6 @@ namespace Core.DataAccess
     {
         Task Add(T entity);
         Task Update(T entity);
-        Task Delete(T entity);
         Task Delete(int id);
         Task<List<T>> GetAll(Expression<Func<T, bool>> filter = null);
         Task<T> Get(Expression<Func<T, bool>> filter);

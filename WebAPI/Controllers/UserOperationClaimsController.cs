@@ -38,7 +38,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> Delete(UserOperationClaim userOperationClaim)
+        public async Task<IActionResult> Delete(int userOperationClaim)
         {
             var result = await _userOperationClaimService.Delete(userOperationClaim);
             if (result.Success)

@@ -13,7 +13,7 @@ namespace Business.Repositories.UserRepository
         Task<IResult> SendForgotPasswordMail(string email);
         Task<IResult> ChangePassword(UserChangePasswordDto userChangePasswordDto);
         Task<IResult> CreateANewPassword(CreateANewPasswordDto createANewPasswordDto);
-        Task<IResult> Delete(User user);
+        Task<IResult> Delete(int user);
         Task<IDataResult<List<User>>> GetList();
         Task<User> GetByEmail(string email);
         Task<List<OperationClaim>> GetUserOperationClaims(int userId);

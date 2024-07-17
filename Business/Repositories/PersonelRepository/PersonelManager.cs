@@ -49,7 +49,7 @@ namespace Business.Repositories.PersonelRepository
         [SecuredAspect()]
         [RemoveCacheAspect("IPersonelService.Get")]
 
-        public async Task<IResult> Delete(Personel personel)
+        public async Task<IResult> Delete(int personel)
         {
             await _personelDal.Delete(personel);
             return new SuccessResult(PersonelMessages.Deleted);

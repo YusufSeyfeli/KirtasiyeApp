@@ -12,7 +12,7 @@ namespace Business.Repositories.SiparisUrunRepository
     {
         Task<IResult> Add(SiparisUrun siparisUrun);
         Task<IResult> Update(SiparisUrun siparisUrun);
-        Task<IResult> Delete(SiparisUrun siparisUrun);
+        Task<IResult> Delete(int siparisUrun);
         Task<IDataResult<List<SiparisUrun>>> GetList();
         Task<IDataResult<SiparisUrun>> GetById(int id);
     }

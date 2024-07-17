@@ -7,7 +7,7 @@ namespace Business.Repositories.EmailParameterRepository
     {
         Task<IResult> Add(EmailParameter emailParameter);
         Task<IResult> Update(EmailParameter emailParameter);
-        Task<IResult> Delete(EmailParameter emailParameter);
+        Task<IResult> Delete(int id);
         Task<IDataResult<List<EmailParameter>>> GetList();
         Task<IDataResult<EmailParameter>> GetById(int id);
         Task<EmailParameter> GetFirst();

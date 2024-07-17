@@ -49,7 +49,7 @@ namespace Business.Repositories.SiparisKirtasiyeRepository
         [SecuredAspect()]
         [RemoveCacheAspect("ISiparisKirtasiyeService.Get")]
 
-        public async Task<IResult> Delete(SiparisKirtasiye siparisKirtasiye)
+        public async Task<IResult> Delete(int siparisKirtasiye)
         {
             await _siparisKirtasiyeDal.Delete(siparisKirtasiye);
             return new SuccessResult(SiparisKirtasiyeMessages.Deleted);

@@ -51,7 +51,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> Delete(User user)
+        public async Task<IActionResult> Delete(int user)
         {
             var result = await _userService.Delete(user);
             if (result.Success)

@@ -52,7 +52,7 @@ namespace Business.Repositories.OperationClaimRepository
 
         [SecuredAspect()]
         [RemoveCacheAspect("IOperationClaimService.Get")]
-        public async Task<IResult> Delete(OperationClaim operationClaim)
+        public async Task<IResult> Delete(int operationClaim)
         {
             await _operationClaimDal.Delete(operationClaim);
             return new SuccessResult(OperationClaimMessages.Deleted);

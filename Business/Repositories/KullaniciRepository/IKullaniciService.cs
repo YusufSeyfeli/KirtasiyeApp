@@ -12,7 +12,7 @@ namespace Business.Repositories.KullaniciRepository
     {
         Task<IResult> Add(Kullanici kullanici);
         Task<IResult> Update(Kullanici kullanici);
-        Task<IResult> Delete(Kullanici kullanici);
+        Task<IResult> Delete(int kullanici);
         Task<IDataResult<List<Kullanici>>> GetList();
         Task<IDataResult<Kullanici>> GetById(int id);
     }

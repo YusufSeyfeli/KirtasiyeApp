@@ -7,7 +7,7 @@ namespace Business.Repositories.OperationClaimRepository
     {
         Task<IResult> Add(OperationClaim operationClaim);
         Task<IResult> Update(OperationClaim operationClaim);
-        Task<IResult> Delete(OperationClaim operationClaim);
+        Task<IResult> Delete(int operationClaim);
         Task<IDataResult<List<OperationClaim>>> GetList();
         Task<IDataResult<OperationClaim>> GetById(int id);
         Task<OperationClaim> GetByIdForUserService(int id);

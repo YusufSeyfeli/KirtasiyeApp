@@ -49,7 +49,7 @@ namespace Business.Repositories.KullaniciRepository
         [SecuredAspect()]
         [RemoveCacheAspect("IKullaniciService.Get")]
 
-        public async Task<IResult> Delete(Kullanici kullanici)
+        public async Task<IResult> Delete(int kullanici)
         {
             await _kullaniciDal.Delete(kullanici);
             return new SuccessResult(KullaniciMessages.Deleted);

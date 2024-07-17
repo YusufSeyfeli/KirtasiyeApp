@@ -25,7 +25,7 @@ namespace Business.Repositories.UserOperationClaimRepository
         }
 
 
-        public async Task<IResult> Delete(UserOperationClaim userOperationClaim)
+        public async Task<IResult> Delete(int userOperationClaim)
         {
             await _userOperationClaimDal.Delete(userOperationClaim);
             return new SuccessResult(UserOperationClaimMessages.Deleted);

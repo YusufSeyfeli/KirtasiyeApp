@@ -12,7 +12,7 @@ namespace Business.Repositories.MusteriSiparisRepository
     {
         Task<IResult> Add(MusteriSiparis musteriSiparis);
         Task<IResult> Update(MusteriSiparis musteriSiparis);
-        Task<IResult> Delete(MusteriSiparis musteriSiparis);
+        Task<IResult> Delete(int musteriSiparis);
         Task<IDataResult<List<MusteriSiparis>>> GetList();
         Task<IDataResult<MusteriSiparis>> GetById(int id);
     }

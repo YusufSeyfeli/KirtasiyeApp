@@ -92,7 +92,7 @@ namespace Business.Repositories.UserRepository
 
         [SecuredAspect()]
         [RemoveCacheAspect("IUserService.Get")]
-        public async Task<IResult> Delete(User user)
+        public async Task<IResult> Delete(int user)
         {
             await _userDal.Delete(user);
             return new SuccessResult(UserMessages.DeletedUser);

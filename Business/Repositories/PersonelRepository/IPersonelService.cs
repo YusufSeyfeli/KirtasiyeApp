@@ -12,7 +12,7 @@ namespace Business.Repositories.PersonelRepository
     {
         Task<IResult> Add(Personel personel);
         Task<IResult> Update(Personel personel);
-        Task<IResult> Delete(Personel personel);
+        Task<IResult> Delete(int personel);
         Task<IDataResult<List<Personel>>> GetList();
         Task<IDataResult<Personel>> GetById(int id);
     }

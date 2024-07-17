@@ -33,9 +33,9 @@ namespace Business.Repositories.EmailParameterRepository
 
         [SecuredAspect()]
         [RemoveCacheAspect("IEmailParameterService.Get")]
-        public async Task<IResult> Delete(EmailParameter emailParameter)
+        public async Task<IResult> Delete(int id)
         {
-            await _emailParameterDal.Delete(emailParameter);
+            await _emailParameterDal.Delete(id);
             return new SuccessResult(EmailParameterMessages.DeletedEmailParameter);
         }
 

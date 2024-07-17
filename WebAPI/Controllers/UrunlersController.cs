@@ -38,7 +38,7 @@ namespace WebApi.Controllers
             return BadRequest(result.Message);
         }
 
-        [HttpPost("[action]")]
+        [HttpDelete("[action]/{urunId}")]
         public async Task<IActionResult> Delete(int urunId)
         {
             var result = await _urunlerService.Delete(urunId);
@@ -48,6 +48,7 @@ namespace WebApi.Controllers
             }
             return BadRequest(result.Message);
         }
+
 
         [HttpGet("[action]")]
         public async Task<IActionResult> GetList()
